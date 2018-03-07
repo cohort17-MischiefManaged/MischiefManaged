@@ -32,6 +32,7 @@ class Gryffindor extends React.Component {
         
     }
 
+    // axios request from HPAPI to set character state
     componentDidMount() {
         axios.get(`${config.HPapiURL}`, {
             params: {
@@ -40,7 +41,6 @@ class Gryffindor extends React.Component {
             }
         })
             .then(({ data }) => {
-                // console.log(data);
                 this.setState({
                     characters: data
                 });
@@ -64,14 +64,14 @@ class Gryffindor extends React.Component {
         });
     }
     
-
+    // Create filter function to only characters of selected house
     filterCharacters() {   
         let charState = this.state.characters;
         charState = charState.filter((character) => {
             return character.house === 'Gryffindor';
         });
 
-
+        // axios request to get images from fandomwiki, using name from HPAPI to connect name to image.
         const images = charState.map((char) => {
             return axios({
                 method: 'GET',
@@ -85,16 +85,13 @@ class Gryffindor extends React.Component {
                     params: {
                         format: 'json',
                         titles: char.name,
-                        // width: 200,
-                        // height: 200,
                     }
                 }
             });
         });
 
- 
+        // For Each to populate chart info
         charState.forEach((char) => {
-                    // console.log(this.state.pictures)
             
             if (char.bloodStatus === 'pure-blood') {
                 this.setState((prevState, props) => {
@@ -134,7 +131,7 @@ class Gryffindor extends React.Component {
 
         });
 
-
+        // Shout out to Ryan, this is dope
         Promise.all(images)
             .then((images) => {
 
@@ -188,7 +185,6 @@ class Gryffindor extends React.Component {
                     {this.state.filteredCharacters.map((character) => {
 
                     return (
-                        // charName = this.props.character.name
                         <CharacterBio character={character} />
                     )
                 })}
