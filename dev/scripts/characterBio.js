@@ -53,7 +53,7 @@ class CharacterBio extends React.Component {
         <div>
             <div className="cardFrontContainer">
                 <div className="cardFront">
-                    <img className="frogCardFrontBorder" src="../.././assets/chocolatefrog.png" alt={`Chocolate Frog Card border containing picture of ${event.name}`} />
+                <img className="frogCardFrontBorder" src="../.././assets/chocolatefrog.png" alt={`Chocolate Frog Card border containing picture of ${event.name}`} />
                 <img className="portrait" src={event.thumbnail} alt={`picture of ${event.name}`}/>
                 </div>
                     <h2 className="characterName" >{event.name}</h2>
