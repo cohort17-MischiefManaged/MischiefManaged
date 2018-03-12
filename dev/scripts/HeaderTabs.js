@@ -11,6 +11,9 @@ import Slytherin from './slytherin.js'
 import Hufflepuff from './hufflepuff.js'
 
 class HeaderTabs extends React.Component {
+    constructor(props){
+    super(props)
+    }
     render() {
         return (
             <div>
