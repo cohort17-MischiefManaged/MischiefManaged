@@ -30,8 +30,8 @@ class Home extends React.Component {
         <div>
           <main>
             <div className="banner">
-              <h1>Mischief Managed</h1>
             </div>
+            <h1>Mischief Managed</h1>
             <div className="gryffindor-landing landing">
               <div className="words">
                 <Link to="/gryffindor">Gryffindor <p className="tagline">Gather info on Gryffindor</p></Link>

@@ -28,4 +28,3 @@ class HeaderTabs extends React.Component {
 }
 
 export default HeaderTabs
-
