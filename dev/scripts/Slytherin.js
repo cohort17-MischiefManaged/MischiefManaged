@@ -174,9 +174,13 @@ class Slytherin extends React.Component {
         else {
             Chart = (<div></div>)
         }
+        let gryffindor = "gryffindor"
+        let hufflepuff = "hufflepuff"
+        let ravenclaw = "ravenclaw"
+        let slytherin = "slytherinTab"
         return (
             <div className="mainBody">
-                <HeaderTabs />
+                <HeaderTabs slytherin={slytherin} hufflepuff={hufflepuff} ravenclaw={ravenclaw} gryffindor={gryffindor} />
                 <div className="instructions">
                     <p> Hover over the cards below for more information on each character. Click on them to keep them flipped.</p>
                 </div>

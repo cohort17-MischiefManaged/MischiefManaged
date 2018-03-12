@@ -13,7 +13,11 @@
 }
 
 .gryffindorTab {
-    background-color: $gryff;
+    background-color: rgb(155, 10, 24);
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    border: 7px solid $gryff;
+    border-radius: 2px;
+    transition: .2s;
 }
 
 .gryff {
@@ -33,6 +37,14 @@
     border-radius: 2px;
 }
 
+.hufflepuffTab {
+    background-color: rgb(252, 192, 56);
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    border: 7px solid $yellow;
+    transition: .2s;
+    border-radius: 2px;
+}
+
 .hufflepuff:hover,
 .hufflepuff:focus {
     background-color: $yellow
@@ -40,6 +52,14 @@
 
 .ravenclaw {
     background-color: rgb(209, 186, 150);
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    border: 7px solid $raven;
+    transition: .2s;
+    border-radius: 2px;
+}
+
+.ravenclawTab {
+    background-color: rgb(45, 66, 142);
     background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
     border: 7px solid $raven;
     transition: .2s;
@@ -57,6 +77,14 @@
 
 .slytherin {
     background-color: rgb(209, 186, 150);
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    border: 7px solid $green;
+    transition: .2s;
+    border-radius: 2px;
+}
+
+.slytherinTab {
+    background-color: rgb(16, 107, 79);
     background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
     border: 7px solid $green;
     transition: .2s;

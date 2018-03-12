@@ -11,18 +11,34 @@ import Slytherin from './slytherin.js'
 import Hufflepuff from './hufflepuff.js'
 
 class HeaderTabs extends React.Component {
-    constructor(props){
-    super(props)
+    constructor(props) {
+    super(props); 
+        this.state={
+            gryffindor: '',
+            hufflepuff: '',
+            ravenclaw: '',
+            slytheirn: ''
+        }
+    }
+
+    componentWillReceiveProps(props){
+        console.log(props);
+        this.setState({
+            gryffindor: props.gryffindor,
+            hufflepuff: props.hufflepuff,
+            ravenclaw: props.ravenclaw,
+            slytheirn: props.slytherin
+        })
     }
     render() {
         return (
             <div>
                 <header>
                     <div className="houseTabs">
-                        <div className="gryffindor"><Link to="/gryffindor">Gryffindor</Link></div>
-                        <div className="hufflepuff"> <Link to="/hufflepuff">Hufflepuff</Link></div>
-                        <div className="ravenclaw"><Link to="/ravenclaw">Ravenclaw</Link></div>
-                        <div className="slytherin"> <Link to="/slytherin">Slytherin</Link></div>
+                        <div className={this.state.gryffindor}><Link to="/gryffindor">Gryffindor</Link></div>
+                        <div className={this.state.hufflepuff}> <Link to="/hufflepuff">Hufflepuff</Link></div>
+                        <div className={this.state.ravenclaw}><Link to="/ravenclaw">Ravenclaw</Link></div>
+                        <div className={this.state.slytheirn}> <Link to="/slytherin">Slytherin</Link></div>
                     </div>
                 </header>
             </div>
